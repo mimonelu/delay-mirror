@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://mimonelu.github.io/motoko-css/motoko.css" rel="stylesheet">
+<title>Delay Mirror</title>
+<style>
+
+  .canvas {
+    background-color: #c0c0c0;
+    display: block;
+    width: 100%;
+  }
+
+  .video {
+    display: none;
+  }
+
+</style>
+<body class="motoko">
+  <header>
+    <h1>Delay Mirror</h1>
+    <p>遅れ鏡です。N秒前のフロントカメラの映像を表示します。</p>
+  </header>
+  <article>
+    <aside>
+      <label><input name="delay" type="radio" value="0"> 0秒前（遅延なし）</label>
+      <label><input name="delay" type="radio" value="3000" checked> 3秒前</label>
+      <label><input name="delay" type="radio" value="6000"> 6秒前</label>
+      <label><input name="delay" type="radio" value="12000"> 12秒前</label>
+    </aside>
+    <canvas class="canvas"></canvas>
+    <video class="video" playsinline></video>
+  </article>
+  <footer>
+    <div>&copy; 2024 mimonelu</div>
+  </footer>
+  <script src="./main.js"></script>
+</body>
